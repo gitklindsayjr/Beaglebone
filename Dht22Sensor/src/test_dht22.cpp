@@ -30,7 +30,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <signal.h>
-#include <pru_control_class.h>
+#include "pru_control_class.h"
 
 #define SENSOR_BYTES    5
 
