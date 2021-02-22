@@ -54,9 +54,9 @@ DHT_Sensor
 This project was built using CCS V10.2. The code "dht_sensor.c" is dependent on the installation of the PRU resources installed during the CCS setup.
 
 They are:
-~/ti/oru-software-support-package
-~/ti/oru-software-support-package/include
-~/ti/oru-software-support-package/include/am335x
+~/ti/pru-software-support-package
+~/ti/pru-software-support-package/include
+~/ti/pru-software-support-package/include/am335x
         --- And in my installation directory /opt/ti ---
 /opt/ti/ccs1020/ccs/ccs_base/pru/include
 /opt/ti/ccs1020/ccs/tools/compiler/ti=cgt-pru_2.3.3/include
@@ -71,6 +71,41 @@ Build as a "Static Library" New CCS Project->Output type:
 
   sources: pru_rpmsg.c, pru_virtqueue.c
   
+Cloning and Setup
+-------------------------------------------
+$ mkdir git
+$ cd git
+$ git clone https://github.com/gitklindsayjr/Beaglebone
+$ cd ..
+PRU setup for CCS
+-----------------
+$ mkdir ~/PRU  # This will be your new workspace for Code Composer Studio, rename as necessary
+
+Using Ubuntu Desktop: Code Composer Studio -> Browse to workspace ~/PRU -> Launch
+CCS Select: Project - > Import CCS Projects -> Browse -> ~/git/Beaglebone
+Discovered Projects: Select - > PruLibrary and DHT_Sensor -> Check-Copy projects into workspace -> Finish
+
+Build project PruLibrary, then DHT_Sensor.  You may encounter dependency issues because of the differences in environment.
+Refer to these depencies listed in the DHT_Sensor section of this readme file.
+
+Beaglebone setup for Eclipse Cross Compile
+-------------------------------------------
+$ mkdir ~/BBB  # This will be your new workspace for Eclipse, rename as necessary
+
+
+Using Ubuntu Desktop: Eclipse -> Browse to workspace ~/BBB -> Launch
+Eclipse Select: File - > General -> Existing Projects into workspace -> Next -> Browse -> ~/git/Beaglebone
+Projects: Deselect -> DHT_Sensor and PruLibrary
+Projects: Select - > Dht22Sensor and PruControlTest -> Check-Copy projects into workspace -> Finish
+
+Build project PruControlTest, then Dht22Sensor.  You may encounter dependency issues because of the differences in environment.
+
+You may need to reset the path to your cross compiler tool path since I used the same tools for the RPI and BBB.
+
+Also if you have EGit installed you will need to disconnect these projects, Select: Team -> Disconnect 
+
+
+
 
         
         
