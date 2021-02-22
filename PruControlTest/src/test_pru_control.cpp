@@ -55,7 +55,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
-#include <pru_control_class.h>
+#include "pru_control_class.h"
 
 int handleLoadStateOptions(char *arg, PruControl *pru);
 int handleCopyRestart(char *arg1, char *arg2, PruControl *pru);
