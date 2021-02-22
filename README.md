@@ -1,5 +1,5 @@
 # Beaglebone
-This repository contains 2 Eclipse projects "Dht22Sensor" and "PruControlTest".  The Eclipse projects were developed on a linux/Ubunt 18.04 as a Corss Compiled C++ project for the Beaglebone Black using "arm-linux-gnueabihf" tools.  The debugger used for these projects is "gdb-multiarch".  The tool path is using the "/usr/cross-pi-gcc-10.1.0-2/arm-linux-gnueabihf" which is also used for the RaspberryPI 4.
+This repository contains 3 Eclipse projects "Dht22Sensor", "PruControlTest", plus "PruLibrary".  The Eclipse projects were developed on a linux/Ubunt 18.04 as a Corss Compiled C++ project for the Beaglebone Black using "arm-linux-gnueabihf" tools.  The debugger used for these projects is "gdb-multiarch".  The tool path is using the "/usr/cross-pi-gcc-10.1.0-2/arm-linux-gnueabihf" which is also used for the RaspberryPI 4.
 
 PruControlTest
 --------------
