@@ -29,7 +29,7 @@
 #include "pru_control_class.h"
 
 #define PRU_PROC_CORE0        "/dev/remoteproc/pruss-core0"
-#define PRU_PROC_CORE1        "/dev/remoteproc/pruss-core1/"
+#define PRU_PROC_CORE1        "/dev/remoteproc/pruss-core1"
 #define STATE_STR_RUNNING     "running"
 #define STATE_STR_OFFLINE     "offline"
 #define FIRMWARE_STR         "/firmware"
