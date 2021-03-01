@@ -154,6 +154,8 @@ void PruControl::load(void)
 {
 	stop();
 	char app[] = APP_STR_CORE0;
+	if(pruCore == 1)
+		strcpy(app, APP_STR_CORE1);
 	if(openPru(LOAD))
 		return;
 	int n = strlen(app);
